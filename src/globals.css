@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* ----- Basic ----- */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-primary: hsl(220, 90%, 55%);
+  --color-secondary: hsl(280, 75%, 60%);
+  --color-accent: hsl(160, 90%, 40%);
+  --color-neutral: {
+    100: hsl(0, 0%, 95%),
+    200: hsl(0, 0%, 85%),
+    500: hsl(0, 0%, 50%),
+    900: hsl(0, 0%, 10%)
+  },
+  --color-success: hsl(140, 60%, 50%);
+  --color-warning: hsl(40, 90%, 55%);
+  --color-error: hsl(0, 75%, 50%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----- Layout ----- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ----- Fonts ----- */
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+}
+
+.body-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+.muted-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-500);
+}
+
+
+/* ----- Theme ----- */
+
+[data-theme="dark"] {
+  --color-primary: hsl(220, 90%, 65%);
+  --color-background: hsl(220, 20%, 10%);
+  --color-text: hsl(0, 0%, 90%);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
