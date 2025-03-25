@@ -1,4 +1,5 @@
 import styles from './button.module.css';
+import { Button as ShadcnButton } from '@/components/ui/button';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -21,13 +22,13 @@ export const Button = ({
   const uiButtonClass = [styles.celesteUiButton + type && `--${type}`, styles.celesteUiButton + size && `--${size}`].join(' ');
   
   return (
-    <button className={uiButtonClass} onClick={onClick} {...props}>
+    <ShadcnButton className={uiButtonClass} onClick={onClick} {...props}>
       <style jsx>{`
         button {
           background-color: ${backgroundColor};
         }
       `}</style>
       {label}{children}
-    </button>
+    </ShadcnButton>
   );
 };
