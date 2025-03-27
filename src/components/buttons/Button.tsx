@@ -6,16 +6,16 @@ interface ButtonProps {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
   size?: 'small' | 'medium' | 'large';
   label?: string;
-  // onClick?: () => void;
+  onClick?: () => void;
 }
 
 export const Button = ({
-  // children,
+  children,
   variant = 'default',
   size = 'medium',
   label = 'Celeste UI Button',
-  // onClick,
-  // ...props
+  onClick,
+  ...props
 }: ButtonProps) => {
   // const uiButtonClass = [styles.celesteUiButton + variant && `__${variant}`, styles.celesteUiButton + size && `__${size}`].join(' ');
   // const uiButtonClass = `${styles.celesteUiButton}${variant && `__${variant}`}${size && `__${size}`}`;
@@ -25,16 +25,12 @@ export const Button = ({
 
   return (
     <ShadcnButton
-      // asChild
       className={[styles[buttonVariant], styles[buttonSize]].join(' ')}
-      // className={styles.celesteUiButton__primary}
-      // variant={variant}
-      // size={'sm'}
-      // onClick={onClick}
-      // {...props}
+      onClick={onClick}
+      {...props}
     >
       {label}
-      {/* {children && children} */}
+      {children && children}
     </ShadcnButton>
   );
 };
