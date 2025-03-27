@@ -7,24 +7,25 @@
   line-height: 1;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.celesteUiButton--primary {
+.celesteUiButton__default {
   background-color: #555ab9;
   color: white;
 }
-.celesteUiButton--secondary {
+.celesteUiButton__secondary {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: fuchsia;
   color: #333;
 }
-.celesteUiButton--small {
+.celesteUiButton__small {
   padding: 10px 16px;
   font-size: 12px;
 }
-.celesteUiButton--medium {
+.celesteUiButton__medium {
   padding: 11px 20px;
   font-size: 14px;
 }
-.celesteUiButton--large {
+.celesteUiButton__large {
   padding: 12px 24px;
   font-size: 16px;
 }
